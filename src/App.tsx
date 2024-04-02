@@ -1,9 +1,9 @@
-import { Search } from "./assets/components/Search/Search.tsx";
+import { Card } from "./components/Card/Card.tsx";
 
 function App() {
   return (
     <>
-      <Search />
+      <Card />
     </>
   );
 }
