@@ -1,7 +1,11 @@
-import "./App.css";
+import { Search } from "./assets/components/Search/Search.tsx";
 
 function App() {
-  return <>hey</>;
+  return (
+    <>
+      <Search />
+    </>
+  );
 }
 
 export default App;

@@ -1,0 +1,11 @@
+.myInput {
+  border: solid 2px black;
+  padding: 8px;
+}
+.searchButton {
+  background: #75f1f1;
+  padding: 8px;
+  margin: 8px;
+  border: none;
+  cursor: pointer;
+}
