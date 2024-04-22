@@ -20,6 +20,7 @@ export function Search({ onSubmit }: SearchProps) {
         className={myInput}
         name="myInput"
         type="text"
+        autoComplete="on"
       />
       <input type="submit" className={searchButton} value={"search"} />
     </form>

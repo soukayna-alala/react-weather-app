@@ -5,7 +5,6 @@ function Info({ name, main, wind }: Response) {
   const { temp, humidity } = main;
   const { speed } = wind;
   const { place, temperature, windSpeed, humidityPercent } = Styles;
-
   return (
     <>
       <div className={place}>Location: {name}</div>
