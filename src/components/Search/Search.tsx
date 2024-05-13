@@ -8,7 +8,7 @@ export function Search({ onSubmit }: SearchProps) {
 
   function onSearch(event: FormEvent) {
     event.preventDefault();
-    const location = inputElement.current.value;
+    const location = inputElement.current.value.trim();
     onSubmit(location);
   }
 

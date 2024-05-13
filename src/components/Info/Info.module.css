@@ -9,3 +9,13 @@
 
 .humidityPercent {
 }
+
+.weatherImg {
+  width: 80px;
+}
+
+.waterIcon,
+.windIcon {
+  font-size: 20px;
+  margin: 0 10px 0 0;
+}

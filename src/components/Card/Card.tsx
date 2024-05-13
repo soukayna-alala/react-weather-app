@@ -16,6 +16,7 @@ export function Card() {
   function onSubmit(location: string) {
     if (location.length === 0) {
       setError(EMPTY_SEARCH_ERROR);
+      setWeather(null);
     } else {
       fetchWeather(location);
     }
