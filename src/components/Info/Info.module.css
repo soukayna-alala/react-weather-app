@@ -1,21 +1,50 @@
-.place {
+.status,
+.temperature {
+  margin: auto;
+  text-align: center;
 }
 
 .temperature {
+  font-size: 74px;
 }
 
-.windSpeed {
+.status {
+  font-size: 28px;
 }
 
+.windSpeed,
 .humidityPercent {
+  padding: 10px 0;
+  display: grid;
+  margin: auto;
+  text-align: center;
+  font-weight: 100;
 }
 
 .weatherImg {
-  width: 80px;
+  width: 160px;
+  align-items: center;
+  margin: auto;
 }
 
 .waterIcon,
 .windIcon {
   font-size: 20px;
-  margin: 0 10px 0 0;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.statusTemp {
+  margin: auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 20px;
+  color: #fff;
+  border-radius: 10px;
+  background: linear-gradient(#05ccff, #5e71ff, #b01eff);
+  width: 300px;
+  margin: auto;
 }

@@ -1,17 +1,19 @@
 import { Search } from "../Search/Search.tsx";
 import { useState } from "react";
+import styles from "./Card.module.css";
 import {
   KEY,
   API_URL,
   LOCATION_NOT_FOUND_ERROR,
   EMPTY_SEARCH_ERROR,
 } from "./constants.ts";
-import { Response } from "./interfaces.ts";
+import { WeatherResponse } from "./interfaces.ts";
 import Info from "../Info/Info.tsx";
 
 export function Card() {
-  const [weather, setWeather] = useState<Response | null>(null);
+  const [weather, setWeather] = useState<WeatherResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const { errorMessage } = styles;
 
   function onSubmit(location: string) {
     if (location.length === 0) {
@@ -34,7 +36,7 @@ export function Card() {
         }
         return response.json();
       })
-      .then((data: Response) => {
+      .then((data: WeatherResponse) => {
         console.log(data);
         setError(null);
         setWeather(data);
@@ -45,7 +47,7 @@ export function Card() {
     <>
       <Search onSubmit={onSubmit} />
       {weather ? <Info {...weather} /> : null}
-      {error ? <p>error : {error}</p> : null}
+      {error ? <p className={errorMessage}>error : {error}</p> : null}
     </>
   );
 }
