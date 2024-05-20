@@ -1,4 +1,22 @@
 .errorMessage {
-  color: #ff0000;
-  text-align: center;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.errorContainer {
+  display: grid;
+  grid-template-columns: 20px auto;
+  gap: 10px;
+  align-items: center;
+  color: #fff;
+  background: #ff0000;
+  margin: 0 auto;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.errorIcon {
+  font-size: 20px;
 }

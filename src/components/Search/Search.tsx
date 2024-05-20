@@ -24,7 +24,7 @@ export function Search({ onSubmit }: SearchProps) {
       <FontAwesomeIcon className={faLocationDotIcon} icon={faLocationDot} />
       <input
         ref={inputElement}
-        placeholder="Type Your Location"
+        placeholder="Search"
         className={input}
         name="myInput"
         type="text"

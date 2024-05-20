@@ -9,11 +9,13 @@ import {
 } from "./constants.ts";
 import { WeatherResponse } from "./interfaces.ts";
 import Info from "../Info/Info.tsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 export function Card() {
   const [weather, setWeather] = useState<WeatherResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const { errorMessage } = styles;
+  const { errorMessage, errorIcon, errorContainer } = styles;
 
   function onSubmit(location: string) {
     if (location.length === 0) {
@@ -47,7 +49,15 @@ export function Card() {
     <>
       <Search onSubmit={onSubmit} />
       {weather ? <Info {...weather} /> : null}
-      {error ? <p className={errorMessage}>error : {error}</p> : null}
+      {error ? (
+        <div className={errorContainer}>
+          <FontAwesomeIcon className={errorIcon} icon={faTriangleExclamation} />
+          <p className={errorMessage}>
+            ERROR! <br />
+            {error}
+          </p>
+        </div>
+      ) : null}
     </>
   );
 }

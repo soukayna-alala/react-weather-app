@@ -40,11 +40,14 @@
 
 .gridContainer {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   padding: 20px;
   color: #fff;
   border-radius: 10px;
   background: linear-gradient(#05ccff, #5e71ff, #b01eff);
-  width: 300px;
   margin: auto;
+
+  @media screen and (min-width: 480px) {
+    grid-template-columns: auto auto;
+  }
 }
