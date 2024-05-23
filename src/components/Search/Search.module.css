@@ -22,10 +22,10 @@
 
 .faLocationDotIcon,
 .searchIconBtn {
-  font-size: 26px;
   color: #fff;
   background: rgba(0, 0, 0, 0);
   padding: 16px;
+  font-size: 26px;
 }
 
 .faLocationDotIcon {
@@ -46,6 +46,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 0 16px 0;
+  gap: 15px;
 }
 
 .button {
